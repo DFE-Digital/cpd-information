@@ -1,6 +1,6 @@
 ---
 applications:
-- name: govspeak-prototype
+- name: cpd-information-dev
   memory: 64M
   buildpacks:
     - https://github.com/cloudfoundry/staticfile-buildpack

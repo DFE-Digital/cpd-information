@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
+ruby File.read(".ruby-version").chomp
+
 gem "nanoc"
 gem "slim"
 gem "adsf"
