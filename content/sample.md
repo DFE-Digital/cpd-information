@@ -9,7 +9,7 @@ s2. Two
 s3. Three
 
 
-### Tables
+### Table
 
 |                                  | Monthly direct debit    | One-off payment    |
 | -------------------------------- | ----------------------- | ------------------ |
