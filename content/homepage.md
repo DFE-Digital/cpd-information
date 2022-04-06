@@ -1,8 +1,8 @@
 ---
-title: Index
+title: Development opportunities for teachers and school leaders 
 ---
 
-## Hello from James 🎉
+## Become a more effective classroom practitioner
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut **labore et dolore magna aliqua**. Fermentum dui faucibus in ornare
@@ -15,7 +15,7 @@ egestas maecenas pharetra convallis posuere morbi leo. Purus semper eget duis
 at tellus at urna condimentum mattis. Eget velit aliquet sagittis id
 consectetur. Platea dictumst quisque [sagittis purus sit](#).
 
-### Cras adipiscing enim eu turpis egestas pretium.
+## Develop your leadership skills
 
 Interdum posuere lorem ipsum dolor. Et ultrices neque ornare aenean euismod.
 Donec ultrices tincidunt arcu non sodales neque sodales ut. Egestas pretium
