@@ -106,3 +106,22 @@ Full DfE funding, with no cost to the participant, is available to all teachers 
 Participants will only be eligible for funding for each NPQ once.
 
 ## Next steps
+
+### Step 1 
+ 
+Speak to your line manager to get support for you doing this NPQ. You must have your line manager and head teacher’s approval before applying. 
+ 
+### Step 2 
+ 
+Choose a training provider. Discuss the options with your line manager if you need help making a decision.
+ 
+### Step 3 
+ 
+Register with us and tell us which NPQ you want to do and which provider you have chosen. This is so we can confirm you are eligible for funding. 
+
+You will need the following information to register:
+
+* your name as recorded by the Teacher Regulation Agency (TRA)
+* your Teacher Registration Number (TRN)
+
+We will give your details to your chosen provider once you have registered. They will then send you an application form.
