@@ -26,4 +26,3 @@ Teachers will get to train alongside peers with similar responsibilities. The co
 Teachers and education experts designed this course to fit around busy teaching timetables. There's no project work and minimal time out of school required.
 
 <a href="#" class="govuk-back-link">Back</a>
-
