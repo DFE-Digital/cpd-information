@@ -14,6 +14,19 @@ title: National Professional Qualification: Leading behaviour and culture (NPQ:L
 
 
 
+## Course overview
+
+This one-year course will help staff gain confidence and develop skills in:
+
+* managing behaviour
+* supporting wellbeing in their school
+
+Teachers will get to train alongside peers with similar responsibilities. The course content focuses on the key challenges teachers face in their role.
+
+Teachers and education experts designed this course to fit around busy teaching timetables. There's no project work and minimal time out of school required.
+
+
+
 
 ### Step lists
 
