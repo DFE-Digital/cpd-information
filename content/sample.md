@@ -141,9 +141,6 @@ $LegislativeList
 * 2. Item 2
   * a) Item 2a
   * b) Item 2b
-    * i. Item 2 b i
-    * ii. Item 2 b ii
-    * 3. Item 3
 $EndLegislativeList
 (to indent, add 2 spaces)
 
