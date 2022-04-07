@@ -11,8 +11,7 @@ s3. Three
 <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                 <h1 data-gtm-vis-first-on-screen-8675592_489="171" data-gtm-vis-recent-on-screen-8675592_489="12444" data-gtm-vis-total-visible-time-8675592_489="100" data-gtm-vis-has-fired-8675592_489="1"> Agricultural contractor</h1>
-                <h2 class="govuk-!-margin-top-5 govuk-!-margin-bottom-3" data-gtm-vis-polling-id-8675592_495="267" data-gtm-vis-polling-id-8675592_424="268"><span class="sr-hidden">Alternative titles for this job include </span></h2>
-
+                <h2 class="govuk-!-margin-top-5 govuk-!-margin-bottom-3" data-gtm-vis-polling-id-8675592_495="267" data-gtm-vis-polling-id-
                 <p>Agricultural contractors provide specialised, seasonal or temporary services to farmers.</p>
             </div>
         </div>
@@ -20,10 +19,13 @@ s3. Three
 
 ### Table
 
-|                                  | Monthly direct debit    | One-off payment    |
-| -------------------------------- | ----------------------- | ------------------ |
-| # Two-wheeled vehicle            | £72                     | £60                |
-| # Three-wheeled vehicle          | £132                    | £120               |
+| -------------------------------- | ----------------------- |
+| # For            | Teachers and school leaders                     |
+| # Course duration          | 12 to 15 months                    |`
+| # Weekly study time          | 1 to 2 hours                    |
+| # Study type          | Self-pace, mostly online                    |
+| # Assessment type          | Case study (1,500 words)                    |
+| # Next start          | Autumn 2022 (apply from June)                    |
 
 ### Download links
 
