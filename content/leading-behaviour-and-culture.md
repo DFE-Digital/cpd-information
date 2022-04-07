@@ -1,5 +1,5 @@
 ---
-title: National Professional Qualification: Leading behaviour and culture (NPQ:LBC)
+title: "National Professional Qualification: Leading behaviour and culture (NPQ:LBC)"
 ---
 
 ### Summary
