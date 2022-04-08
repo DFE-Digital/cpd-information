@@ -4,6 +4,8 @@ title: Development opportunities for teachers and school leaders
 
 We fund a range of evidence-based professional development options so you can hone your skills at every stage of your career.
 
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
 ## Become a more effective classroom practitioner
 
 Take a specialist national professional qualification (NPQ) to build on your existing experience and knowledge in different aspects of teaching and school life.  
@@ -37,6 +39,8 @@ Develop the expertise you need to become an outstanding executive leader, leadin
 
 ### Early years leadership NPQ (starts Autumn 2022)
 Develop expertise in leading high-quality early years education and care, as well as effective staff and organisational management.
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 ## Support for new headteachers
 
