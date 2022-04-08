@@ -17,6 +17,8 @@ Gain expertise in ways to reduce classroom disruption and learn how to develop a
 ### Leading literacy NPQ (starts Autumn 2022)
 Learn how to support colleagues develop all pupils’ language capability and wider understanding of language.
 
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
 ## Develop your leadership skills
 
 Take a leadership-focused NPQ to help boost your knowledge and confidence as you progress into more senior roles.
