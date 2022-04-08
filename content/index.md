@@ -11,6 +11,12 @@ Take a specialist national professional qualification (NPQ) to build on your exi
 ### Leading teaching NPQ
 Learn how to lead the teaching of a subject, year group or phase in a way that’s effective and helps support colleagues.
 
+### Leading behaviour and culture NPQ
+Gain expertise in ways to reduce classroom disruption and learn how to develop a culture of high expectations and good behaviour in your school.
+
+### Leading literacy NPQ (starts Autumn 2022)
+Learn how to support colleagues develop all pupils’ language capability and wider understanding of language.
+
 ## Develop your leadership skills
 
 Take a leadership-focused NPQ to help boost your knowledge and confidence as you progress into more senior roles.
