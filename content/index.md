@@ -11,7 +11,7 @@ We fund a range of evidence-based professional development options so you can ho
 Take a specialist national professional qualification (NPQ) to build on your existing experience and knowledge in different aspects of teaching and school life.  
 
 ### Leading teaching NPQ
-Learn how to lead the teaching of a subject, year group or phase in a way that’s effective and helps support colleagues.
+Learn how to lead the teaching of a subject, year group or phase in a way that’s effective and helps support colleagues improve pupil outcomes.
 
 ### [Leading behaviour and culture NPQ](https://cpd-information-dev.london.cloudapps.digital/sample/)
 Gain expertise in ways to reduce classroom disruption and learn how to develop a culture of high expectations and good behaviour in your school.
