@@ -1,5 +1,5 @@
 ---
-block: Leading behaviour and culture
+title: Leading behaviour and culture
 ---
 
 ### Summary
