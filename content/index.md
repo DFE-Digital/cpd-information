@@ -46,6 +46,9 @@ Develop expertise in leading high-quality early years education and care, as wel
 
 If you are a new headteacher, you can access one-to-one coaching and a toolkit of resources to help you thrive in your role.
 
+output:
+  html_document:
+    css: "style.css"
 /* header */
 
 
