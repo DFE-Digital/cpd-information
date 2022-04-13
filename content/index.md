@@ -45,31 +45,3 @@ Develop expertise in leading high-quality early years education and care, as wel
 ## Support for new headteachers
 
 If you are a new headteacher, you can access one-to-one coaching and a toolkit of resources to help you thrive in your role.
-
-output:
-  html_document:
-    css: "style.css"
-/* header */
-
-
-/* Auto layout */
-
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 60px 140px;
-
-position: static;
-width: 1240px;
-height: 379px;
-left: 0px;
-top: 0px;
-
-background: #1D70B8;
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 10px 0px;
