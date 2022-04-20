@@ -8,7 +8,7 @@ title: Leading teacher development
 | # For            | Classroom teachers and middle leaders                     |
 | # Course duration          | 12 to 15 months                    |
 | # Weekly study time          | 1 to 2 hours                    |
-| # Study type          | Self-paced, mostly online                    |
+| # Study type          | Mix of self-study and group sessions, mostly online                    |
 | # Assessment type          | Case study (1,500 words)                    |
 | # Next start          | Autumn 2022 (apply from June)                    |
 
