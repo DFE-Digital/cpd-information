@@ -29,7 +29,7 @@ Teachers and education experts designed this course to fit around busy teaching 
 
 This course is for anyone who is, or wants to be, involved in:
 
-managing behaviour and wellbeing strategies in their school
+* managing behaviour and wellbeing strategies in their school
 
 ## What you will learn
 
