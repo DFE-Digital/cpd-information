@@ -93,7 +93,9 @@ Participants will only be eligible for funding for each NPQ once.
 
 ## Who delivers the training
 
-The following DfE-approved training providers run this course:
+DfE-approved training providers work in partnership with regional delivery partners in your area to carry out the training. You and your school should select the training provider and delivery partner combination that best meets your needs.
+
+The following training providers offer this course:
 
 * Ambition Institute
 * Best Practice Network 
@@ -103,8 +105,6 @@ The following DfE-approved training providers run this course:
 * Teach First 
 * Teacher Development Trust 
 * UCL Centre for Educational Leadership
-
-The providers work in partnership with regional delivery partners in your area to carry out the training. You and your school should select the training provider and delivery partner combination that best meets your needs.
 
 ## Next steps
 
