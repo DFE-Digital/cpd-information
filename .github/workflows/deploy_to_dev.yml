@@ -24,21 +24,10 @@ jobs:
       - uses: actions/setup-node@v2.5.1
         with:
           node-version: '16.14.x'
-          cache: 'yarn'
-  
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1.100.0
-        with:
-          ruby-version: 2.7.4
+          cache: 'npm'
       
       - name: Install dependencies
-        run: yarn install
-
-      - name: Install dependencies
-        run: bundle install
-      
-      - name: Build app
-        run: bundle exec nanoc
+        run: npm install
 
       - name: Deploy to GOV.UK PaaS
         id: deploy-to-paas
