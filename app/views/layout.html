@@ -47,6 +47,17 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+
+  <div class="govuk-width-container {{mainClasses}}">
+
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+      {{ govukPhaseBanner({
+        tag: {
+          text: "Prototype"
+        },
+        html: 'This is a new service'
+      }) }}
+    </div>
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
