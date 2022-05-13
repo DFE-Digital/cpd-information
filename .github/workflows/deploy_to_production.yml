@@ -33,7 +33,7 @@ jobs:
           CF_DOCKER_PASSWORD: ${{ secrets.DOCKER_DEV_PASSWORD }}
           PAAS_ORGANISATION: dfe
           # This is a shared PAAS space
-          PAAS_SPACE: earlycareers-framework-prod
+          PAAS_SPACE: early-careers-framework-prod
           ENV_STUB: production
           APP_NAME: cpd-information
           REMOTE_DOCKER_IMAGE_NAME: dfedigital/early-careers-framework-production
