@@ -37,8 +37,8 @@ jobs:
           ENV_STUB: production
           APP_NAME: cpd-information
           REMOTE_DOCKER_IMAGE_NAME: dfedigital/early-careers-framework-production
-          CF_USERNAME: ${{ secrets.GOVPAAS_DEV_USERNAME }}
-          CF_PASSWORD: ${{ secrets.GOVPAAS_DEV_PASSWORD }}
+          CF_USERNAME: ${{ secrets.GOVPAAS_PROD_USERNAME }}
+          CF_PASSWORD: ${{ secrets.GOVPAAS_PROD_PASSWORD }}
         run: |
           cf api https://api.london.cloud.service.gov.uk
           cf auth
