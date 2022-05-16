@@ -2,54 +2,131 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Home – GOV.UK Prototype Kit
+Professional development for teachers and leaders
 {% endblock %}
+
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Prototype your service using GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+{% block navigation %}
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+<div class="govuk-grid-row blue-background ">
+  <main class="govuk-width-container govuk-!-padding-top-7 govuk-!-padding-bottom-5 govuk-!-padding-left-5 govuk-main-wrapper govuk-main-wrapper--l">
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-xl white-text govuk-!-margin-top-0 govuk-!-margin-bottom-0">Professional development for teachers and leaders</h1>
+        <p class="govuk-body govuk-!-font-size-24 govuk-!-margin-top-6 govuk-!-margin-bottom-4 white-text">We fund a range of evidence-based professional development options so you can hone your skills at every stage of your career.
 
-      <h2 class="govuk-heading-m">Versions</h2>
+</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/home">Iterations</a>
-        </li>
+      </div>
+    </div>
 
-      </ul>
+  </main>
+</div>
+{% endblock %}
 
-      
+<div class="govuk-grid-row govuk-!-padding-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">
+      Broaden your expertise
+    </h2>
+    <p>
+      Take a specialist national professional qualification (NPQ) to enhance and develop your existing skills and knowledge both inside and outside of the classroom. 
+    </p>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+</div>
+</div>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Tutorials and templates</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
+<div class="govuk-grid-row govuk-!-padding-top-1">
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/leading-teaching">Leading teaching NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-1">Learn how to lead the teaching and learning of a subject, year group or phase in a way that's effective and helps support colleagues improve pupil outcomes.</p>
     </div>
   </div>
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/leading-behaviour-and-culture">Leading behaviour and culture NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-6">Learn how to create a culture of good behaviour and high expectations in which staff and pupils can thrive.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-!-padding-top-1">
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/leading-literacy">Leading literacy NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-1">Learn how to effectively teach and promote literacy across the whole school, year group, key stage or phase.</p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/leading-teacher-development">Leading teacher development NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-1">Learn how to become a teacher educator and successfully support teachers in your school to expand their skills.</p>
+    </div>
+  </div>
+  
+</div>
+
+<div class="govuk-grid-row govuk-!-padding-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">
+      Develop your leadership skills
+    </h2>
+    <p>
+      Take a leadership-focused NPQ to help boost your knowledge and confidence as you progress into more senior roles.</p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-padding-top-1">
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/senior-leadership">Senior leadership NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-1">Develop your leadership knowledge and expertise to improve outcomes for teachers and pupils in your school.</p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/headship">Headship NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-1">Develop the knowledge that underpins expert school leadership and apply it to become an outstanding headteacher.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-!-padding-top-1">
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/executive-leadership">Executive leadership NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-1">Develop the expertise you need to become an outstanding executive leader, leading change and improvement across your group of schools or multi-academy trust.</p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-half-from-desktop govuk-!-margin-bottom-4">
+    <div style="background-color:#F3F2F1; padding: 10px;">
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1"><a href="/early-years-leadership">Early years leadership NPQ</a></h3>
+      <p class="govuk-!-margin-bottom-1">Develop expertise in leading high-quality early years education and care, as well as effective staff and organisational management.</p>
+    <br>
+    </div>
+  </div>
+  
+</div>
+
+<div class="govuk-grid-row govuk-!-padding-top-7">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">
+      Support for new headteachers
+    </h2>
+    <p>Have you been a headteacher for less than 5 years?</p> 
+    
+    <p>Our <a href="/early-headship-coaching-offer">early headship coaching offer</a> features a range of support, including coaching and networking opportunities. You will also be able to access a toolkit of resources to help you thrive in your role.</p>
+
+  </div>
+</div>
 
 {% endblock %}
