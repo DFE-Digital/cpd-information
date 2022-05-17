@@ -20,8 +20,6 @@ const middleware = [
   require('./lib/middleware/extensions/extensions.js')
 ]
 const config = require('./app/config.js')
-const documentationRoutes = require('./docs/documentation_routes.js')
-const prototypeAdminRoutes = require('./lib/prototype-admin-routes.js')
 const packageJson = require('./package.json')
 const routes = require('./app/routes.js')
 const utils = require('./lib/utils.js')
@@ -98,19 +96,11 @@ const sessionOptions = {
 }
 
 // Support session data in cookie or memory
-if (useCookieSessionStore === 'true') {
-  app.use(sessionInCookie(Object.assign(sessionOptions, {
-    cookieName: sessionName,
-    proxy: true,
-    requestKey: 'session'
-  })))
-} else {
-  app.use(sessionInMemory(Object.assign(sessionOptions, {
-    name: sessionName,
-    resave: false,
-    saveUninitialized: false
-  })))
-}
+app.use(sessionInCookie(Object.assign(sessionOptions, {
+  cookieName: sessionName,
+  proxy: true,
+  requestKey: 'session'
+})))
 
 // Authentication middleware must be loaded before other middleware such as
 // static assets to prevent unauthorised access
@@ -194,48 +184,6 @@ if (useV6) {
   app.use('/public/v6/javascripts/govuk/', express.static(path.join(__dirname, '/node_modules/govuk_frontend_toolkit/javascripts/govuk/')))
 }
 
-// Automatically store all data users enter
-if (useAutoStoreData === 'true') {
-  app.use(utils.autoStoreData)
-  utils.addCheckedFunction(nunjucksAppEnv)
-  if (useDocumentation) {
-    utils.addCheckedFunction(nunjucksDocumentationEnv)
-  }
-  if (useV6) {
-    utils.addCheckedFunction(nunjucksV6Env)
-  }
-}
-
-// Load prototype admin routes
-app.use('/prototype-admin', prototypeAdminRoutes)
-
-// Redirect root to /docs when in promo mode.
-if (promoMode === 'true') {
-  console.log('Prototype Kit running in promo mode')
-
-  app.get('/', function (req, res) {
-    res.redirect('/docs')
-  })
-
-  // Allow search engines to index the Prototype Kit promo site
-  app.get('/robots.txt', function (req, res) {
-    res.type('text/plain')
-    res.send('User-agent: *\nAllow: /')
-  })
-} else {
-  // Prevent search indexing
-  app.use(function (req, res, next) {
-    // Setting headers stops pages being indexed even if indexed pages link to them.
-    res.setHeader('X-Robots-Tag', 'noindex')
-    next()
-  })
-
-  app.get('/robots.txt', function (req, res) {
-    res.type('text/plain')
-    res.send('User-agent: *\nDisallow: /')
-  })
-}
-
 // Load routes (found in app/routes.js)
 if (typeof (routes) !== 'function') {
   console.log(routes.bind)
@@ -243,20 +191,6 @@ if (typeof (routes) !== 'function') {
   routes.bind(app)
 } else {
   app.use('/', routes)
-}
-
-if (useDocumentation) {
-  // Clone app locals to documentation app locals
-  // Use Object.assign to ensure app.locals is cloned to prevent additions from
-  // updating the original app.locals
-  documentationApp.locals = Object.assign({}, app.locals)
-  documentationApp.locals.serviceName = 'Prototype Kit'
-
-  // Create separate router for docs
-  app.use('/docs', documentationApp)
-
-  // Docs under the /docs namespace
-  documentationApp.use('/', documentationRoutes)
 }
 
 if (useV6) {
@@ -303,13 +237,10 @@ if (useV6) {
   })
 }
 
-// Redirect all POSTs to GETs - this allows users to use POST for autoStoreData
-app.post(/^\/([^.]+)$/, function (req, res) {
-  res.redirect(url.format({
-    pathname: '/' + req.params[0],
-    query: req.query
-  })
-  )
+app.post("/cookie-consent", function (req, res, next) {
+  var consent = req.body.analytics_consent.includes('on');
+  res.cookie('cookie-consent', consent == true);
+  res.redirect('/cookies');
 })
 
 // Catch 404 and forward to error handler
