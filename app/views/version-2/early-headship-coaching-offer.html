@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}ß
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="course-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Early headship coaching offer</h1>
+
+      <p>This targeted one-year support package has been tailored to the needs of new headteachers.</p>
+
+      <p>It provides structured, unassessed face-to-face support based on the best available evidence about what makes an effective headteacher. You can complete it alongside the headship national professional qualification (H:NPQ) or as a standalone.</p>
+      
+      <p>You're eligible for this support if you meet the following criteria:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>are in your first 5 years of headship at a state-funded school or state-funded organisation that offers 16 to 19 places in England</li>
+        <li>are taking or have completed the H:NPQ</li>
+        <li>have not withdrawn from the additional support programme previously</li>
+      </ul>
+      
+      <p>The offer provides structured, unassessed face-to-face support based on the best available evidence about what makes an effective headteacher.</p>
+
+      <p>While the exact content of this support will depend on your chosen training provider, activities could include a combination of group coaching, one-to-one support discussions and peer network support.</p>
+
+      <p>Contact your local teaching school hub, lead provider or other delivery partner to find out more.</p>
+      <h2 class="govuk-label govuk-label--l">Your feedback </h2>
+      <div class="govuk-inset-text govuk-!-padding-top-2">Complete our <a href="survey">survey</a>. This will help us to improve this service</div>
+    </div>
+  </div>
+
+{% endblock %}

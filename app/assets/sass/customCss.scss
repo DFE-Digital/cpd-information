@@ -1,0 +1,492 @@
+//sections
+
+.homepage-services-and-info__list {
+
+    
+  list-style: none;
+  margin: 0 -15px;
+  padding: 0
+}
+
+.homepage-services-and-info__list>li:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1
+}
+
+.homepage-services-and-info__list>li:nth-child(2) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2
+}
+
+.homepage-services-and-info__list>li:nth-child(3) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3
+}
+
+.homepage-services-and-info__list>li:nth-child(4) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 4
+}
+
+.homepage-services-and-info__list>li:nth-child(5) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 5
+}
+
+.homepage-services-and-info__list>li:nth-child(6) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 6
+}
+
+.homepage-services-and-info__list>li:nth-child(7) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 7
+}
+
+.homepage-services-and-info__list>li:nth-child(8) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 8
+}
+
+.homepage-services-and-info__list>li:nth-child(9) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 9
+}
+
+.homepage-services-and-info__list>li:nth-child(10) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 10
+}
+
+.homepage-services-and-info__list>li:nth-child(11) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 11
+}
+
+.homepage-services-and-info__list>li:nth-child(12) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 12
+}
+
+.homepage-services-and-info__list>li:nth-child(13) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 13
+}
+
+.homepage-services-and-info__list>li:nth-child(14) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 14
+}
+
+.homepage-services-and-info__list>li:nth-child(15) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 15
+}
+
+.homepage-services-and-info__list>li:nth-child(16) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 16
+}
+
+@media (min-width: 40.0625em) {
+  .homepage-services-and-info__list {
+      display:-ms-grid;
+
+  }
+
+  .homepage-services-and-info__list>li:nth-child(1) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 1
+  }
+
+  .homepage-services-and-info__list>li:nth-child(2) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 1
+  }
+
+  .homepage-services-and-info__list>li:nth-child(3) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 2
+  }
+
+  .homepage-services-and-info__list>li:nth-child(4) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 2
+  }
+
+  .homepage-services-and-info__list>li:nth-child(5) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 3
+  }
+
+  .homepage-services-and-info__list>li:nth-child(6) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 3
+  }
+
+  .homepage-services-and-info__list>li:nth-child(7) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 4
+  }
+
+  .homepage-services-and-info__list>li:nth-child(8) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 4
+  }
+
+  .homepage-services-and-info__list>li:nth-child(9) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 5
+  }
+
+  .homepage-services-and-info__list>li:nth-child(10) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 5
+  }
+
+  .homepage-services-and-info__list>li:nth-child(11) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 6
+  }
+
+  .homepage-services-and-info__list>li:nth-child(12) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 6
+  }
+
+  .homepage-services-and-info__list>li:nth-child(13) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 7
+  }
+
+  .homepage-services-and-info__list>li:nth-child(14) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 7
+  }
+
+  .homepage-services-and-info__list>li:nth-child(15) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 8
+  }
+
+  .homepage-services-and-info__list>li:nth-child(16) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 8
+  }
+}
+
+
+
+  .homepage-services-and-info__list>li:nth-child(1) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 1
+  }
+
+  .homepage-services-and-info__list>li:nth-child(2) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 1
+  }
+
+  .homepage-services-and-info__list>li:nth-child(3) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 1
+  }
+
+  .homepage-services-and-info__list>li:nth-child(4) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 2
+  }
+
+  .homepage-services-and-info__list>li:nth-child(5) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 2
+  }
+
+  .homepage-services-and-info__list>li:nth-child(6) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 2
+  }
+
+  .homepage-services-and-info__list>li:nth-child(7) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 3
+  }
+
+  .homepage-services-and-info__list>li:nth-child(8) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 3
+  }
+
+  .homepage-services-and-info__list>li:nth-child(9) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 3
+  }
+
+  .homepage-services-and-info__list>li:nth-child(10) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 4
+  }
+
+  .homepage-services-and-info__list>li:nth-child(11) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 4
+  }
+
+  .homepage-services-and-info__list>li:nth-child(12) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 4
+  }
+
+  .homepage-services-and-info__list>li:nth-child(13) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 5
+  }
+
+  .homepage-services-and-info__list>li:nth-child(14) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 5
+  }
+
+  .homepage-services-and-info__list>li:nth-child(15) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 5
+  }
+
+  .homepage-services-and-info__list>li:nth-child(16) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 6
+  }
+
+
+.homepage-section__government-activity  {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 20px
+}
+
+.homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1
+}
+
+.homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(2) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2
+}
+
+.homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(3) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3
+}
+
+.homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(4) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 4
+}
+
+.homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(5) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 5
+}
+
+.homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(6) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 6
+}
+
+@media (min-width: 40.0625em) {
+  .homepage-section__government-activity .homepage-services-and-info__list {
+      display:-ms-grid;
+      display: grid;
+      grid-auto-flow: row;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin-bottom: 0
+  }
+
+  .homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(1) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 1
+  }
+
+  .homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(2) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 1
+  }
+
+  .homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(3) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 2
+  }
+
+  .homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(4) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 2
+  }
+
+  .homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(5) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 3
+  }
+
+  .homepage-section__government-activity .homepage-services-and-info__list>li:nth-child(6) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 3
+  }
+}
+
+.chevron-card {
+  border-top: 1px solid #b1b4b6;
+  margin: 0 15px;
+  padding: 5px 0 20px 0
+}
+
+.chevron-card__wrapper {
+  padding: 10px 30px 10px 0;
+  position: relative
+}
+
+.chevron-card__description {
+  margin: 0 -30px 0 0
+}
+
+.chevron-card__link:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0
+}
+
+.chevron-card__link:before {
+  border-right: 3px solid #1d70b8;
+  border-top: 3px solid #1d70b8;
+  content: "";
+  display: block;
+  height: 7px;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  -webkit-transform: translateY(0) rotate(45deg) scale(1);
+  -ms-transform: translateY(0) rotate(45deg) scale(1);
+  transform: translateY(0) rotate(45deg) scale(1);
+  width: 7px
+}
+
+.chevron-card__link:hover:before {
+  border-color: #003078
+}
+
+.chevron-card__link:focus:before {
+  border-color: #0b0c0c
+}
+
+.homepage-section {
+  padding: 20px 0 30px
+}
+
+.homepage-section--links-and-search {
+  background: #f3f2f1;
+  padding: 30px 0 50px
+}
+
+.homepage-section--services-and-info {
+  padding: 30px 0 0
+}
+
+.homepage-section__heading {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #0b0c0c;
+  margin: 0 0 30px;
+  padding: 15px 0 0
+}
+
+.homepage-section__heading-wrapper {
+  margin-bottom: 5px
+}
+
+@media (min-width: 48.0625em) {
+  .homepage-section__heading-wrapper {
+      margin-bottom:0
+  }
+}
+
+.homepage-section__heading--border-none {
+  border: none;
+  padding: 0
+}
+
+@media (max-width: 40.0525em) {
+  .homepage-search {
+      max-width:420px
+  }
+}
+
+.homepage-most-viewed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 40px 0
+}
+
+@media (min-width: 40.0625em) {
+  .homepage-most-viewed-list {
+      padding-bottom:0
+  }
+}
+
+.homepage-most-viewed-list>li {
+  margin-bottom: 20px
+}
+
+@media (min-width: 48.0625em) {
+  .homepage-most-viewed-list>li {
+      margin-bottom:15px
+  }
+}
+
+.homepage-most-viewed-list>li:last-child {
+  margin-bottom: 0
+}
+
+.homepage-most-viewed-list__item {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25
+}
+
+@media print {
+  .homepage-most-viewed-list__item {
+      font-family: sans-serif
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .homepage-most-viewed-list__item {
+      font-size:19px;
+      font-size: 1.1875rem;
+      line-height: 1.3157894737
+  }
+}
+
+@media print {
+  .homepage-most-viewed-list__item {
+      font-size: 14pt;
+      line-height: 1.15
+  }
+}
+
+//sections
