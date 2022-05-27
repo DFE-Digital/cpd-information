@@ -32,7 +32,8 @@
 {% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
 
 {% block head %}
-  {% include "includes/head.html" %}
+{% block meta %}{% endblock %}  
+{% include "includes/head.html" %}
 {% endblock %}
 
 {% block pageTitle %}
