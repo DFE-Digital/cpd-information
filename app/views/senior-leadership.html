@@ -7,13 +7,16 @@ Senior leadership NPQ
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-breadcrumbs">
-  <ol class="govuk-breadcrumbs__list">
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
-    </li>
-  </ol>
-</div>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -29,7 +32,7 @@ Senior leadership NPQ
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            For 
+            For
           </dt>
           <dd class="govuk-summary-list__value">
             Experienced classroom teachers, middle and senior leaders
@@ -49,7 +52,7 @@ Senior leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">1 to 2 hours</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -57,7 +60,7 @@ Senior leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Mix of self-study and group sessions</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -65,7 +68,7 @@ Senior leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Reflection based on case study (up to 2,500 words)</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -73,7 +76,7 @@ Senior leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Autumn 2022 (apply from June)</p>
-          </dd>  
+          </dd>
         </div>
 
       </dl>
@@ -88,7 +91,7 @@ Senior leadership NPQ
         <li>contributing to your school's strategic direction and establishing an environment for pupil success</li>
         <li>helping ensure staff feel supported and valued</li>
       </ul>
-      
+
       <p>Teachers will get to train alongside peers with similar responsibilities. The course content focuses on the key challenges teachers face in their role.</p>
 
       <p>Teachers and education experts designed this course to fit around busy teaching timetables. There's no project work and minimal time out of school required.</p>
@@ -165,9 +168,9 @@ Senior leadership NPQ
         <li>complete the course</li>
         <li>pass a written assessment (up to 2,500 words) at the end</li>
       </ul>
-      
+
       <p>Your course provider will be able to give you more details about how the assessment works.</p>
-      
+
       <h2 class="govuk-heading-l">Course funding</h2>
 
       <p>Full DfE funding, with no cost to the participant, is available to staff from:</p>

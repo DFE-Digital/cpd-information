@@ -1,11 +1,16 @@
 {% extends "layout-version-2.html" %}
 
-{% block pageTitle %}
-Professional development for teachers and leaders
-{% endblock %}
-
 {% block beforeContent %}
-<a class="govuk-back-link" href="course-list">Back</a>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/version-2/course-list"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -15,12 +20,12 @@ Professional development for teachers and leaders
 
 <h1 class="govuk-heading-xl">What is an NPQ?</h1>
 
-<p>NPQs have been designed to support the continuous professional development of teachers and leaders throughout their careers.</p>   
- 
+<p>NPQs have been designed to support the continuous professional development of teachers and leaders throughout their careers.</p>
+
 <p>An NPQ is similar to a level 7 qualification such as a postgraduate master's degree. Study typically involves completing a series of modules and passing a written assessment at the end.</p>
 
 <h2 class="govuk-heading-l">How long is an NPQ?</h2>
- 
+
 <p>NPQ courses take between 12 months and 21 months to complete depending on which one you're doing.</p>
 
 <h2 class="govuk-heading-l">Are there different types of NPQ?</h2>
@@ -39,7 +44,7 @@ Professional development for teachers and leaders
 <p>You'll have access to online content providing flexible learning that can be done at a time to suit your pace.</p>
 
 <p>On average you will need to spend between 1 and 2 hours per week working towards completing a course. Where possible, you should do this during dedicated career development time in school hours.</p>
- 
+
 <h2 class="govuk-heading-l">Why take an NPQ</h2>
 
 <p>Completing an NPQ could help you:</p>

@@ -1,22 +1,20 @@
 {% extends "layout-version-2.html" %}
 
-{% block pageTitle %}
-Professional development for teachers and leaders
-{% endblock %}
-
 {% block beforeContent %}
-<div class="govuk-breadcrumbs">
-  <ol class="govuk-breadcrumbs__list">
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/version-2/course-list">Home</a>
-    </li>
-  </ol>
-</div>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/version-2/course-list"
+    }
+  ]
+}) }}
 {% endblock %}
 
 
 {% block content %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
   <h1 class="govuk-heading-xl">
@@ -28,7 +26,7 @@ Professional development for teachers and leaders
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h2 class="govuk-fieldset__heading ">
-        How did you feel about the information on our service? 
+        How did you feel about the information on our service?
       </h2>
 
     </legend>
@@ -48,19 +46,19 @@ Professional development for teachers and leaders
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
         <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-          Neither satisfied or dissatisfied 
+          Neither satisfied or dissatisfied
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
         <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-          Dissatisfied 
+          Dissatisfied
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
         <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-          Very dissatisfied 
+          Very dissatisfied
         </label>
       </div>
     </div>

@@ -1,11 +1,16 @@
 {% extends "layout-version-2.html" %}
 
-{% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}ß
-
 {% block beforeContent %}
-<a class="govuk-back-link" href="course-list">Back</a>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/version-2/course-list"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -18,7 +23,7 @@
       <p>This targeted one-year support package has been tailored to the needs of new headteachers.</p>
 
       <p>It provides structured, unassessed face-to-face support based on the best available evidence about what makes an effective headteacher. You can complete it alongside the national professional qualification for headship (NPQH) or if you have recently taken the NPQH.</p>
-      
+
       <p>You're eligible for this support if you meet the following criteria:</p>
 
       <ul class="govuk-list govuk-list--bullet">
@@ -26,7 +31,7 @@
         <li>are taking or have completed the NPQH</li>
         <li>have not withdrawn from the additional support programme previously</li>
       </ul>
-      
+
       <p>The offer provides structured, unassessed face-to-face support based on the best available evidence about what makes an effective headteacher.</p>
 
       <p>While the exact content of this support will depend on your chosen training provider, activities could include a combination of group coaching, one-to-one support discussions and peer network support.</p>

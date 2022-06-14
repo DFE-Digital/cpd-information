@@ -1,17 +1,16 @@
 {% extends "layout-version-2.html" %}
 
-{% block pageTitle %}
-Professional development for teachers and leaders
-{% endblock %}
-
 {% block beforeContent %}
-<div class="govuk-breadcrumbs">
-  <ol class="govuk-breadcrumbs__list">
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/home">Home</a>
-    </li>
-  </ol>
-</div>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/version-2/course-list"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -44,7 +43,7 @@ Professional development for teachers and leaders
       <h2 class="govuk-heading-l">Send your ID documents securely</h2>
 
       <p>Follow these steps to send your documents through Galaxkey:</p>
-      
+
       <ol class="govuk-list govuk-list--number">
         <li>Select 'Compose' to create a new secure email.</li>
         <li>Enter 'qts.enquiries@education.gov.uk' as the recipient.</li>

@@ -1,11 +1,16 @@
 {% extends "layout-version-2.html" %}
 
-{% block pageTitle %}
-  Content page template - {{ serviceName }} - GOV.UK Prototype Kit
-{% endblock %}ß
-
 {% block beforeContent %}
-<a class="govuk-back-link" href="course-list">Back</a>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/version-2/course-list"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -41,7 +46,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">1 to 2 hours</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -49,7 +54,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Mix of self-study and group sessions</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -57,7 +62,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Reflection based on case study (1,500 words)</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -65,7 +70,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Autumn 2022 (apply from June)</p>
-          </dd>  
+          </dd>
         </div>
 
       </dl>
@@ -79,7 +84,7 @@
         <li>supporting colleagues with all aspects of their teaching</li>
         <li>contributing to effective professional development linked to teaching, curriculum and assessment</li>
       </ul>
-      
+
       <h2 class="govuk-heading-l">Who this course is for</h2>
 
       <p>This course is for teachers and middle leaders who have, or want to have:</p>
@@ -135,9 +140,9 @@
         <li>complete the course</li>
         <li>pass a written assessment (1,500 words) at the end</li>
       </ul>
-      
+
       <p>Your course provider will be able to give you more details about how the assessment works.</p>
-      
+
       <h2 class="govuk-heading-l">Course funding</h2>
 
       <p>Full DfE funding, with no cost to the participant, is available to staff from:</p>

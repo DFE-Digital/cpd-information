@@ -11,7 +11,7 @@ function terminalLog(violations) {
       id,
       impact,
       description,
-      nodes: nodes.length
+      nodes: nodes.map(n => n.target.join(', ')).join(' | ')
     })
   )
 
@@ -20,14 +20,20 @@ function terminalLog(violations) {
 
 let paths = [
   "/",
-  "/leading-teaching",
+  "/accessibility-statement",
+  "/cookies",
+  "/early-headship-coaching-offer",
+  "/early-years-leadership",
+  "/executive-leadership",
+  "/find-your-teaching-school-hub",
+  "/get-a-teacher-reference-number",
+  "/headship",
   "/leading-behaviour-and-culture",
   "/leading-literacy",
   "/leading-teacher-development",
-  "/senior-leadership",
-  "/headship",
-  "/executive-leadership",
-  "/early-years-leadership"
+  "/leading-teaching",
+  "/privacy",
+  "/senior-leadership"
 ]
 
 describe('Accessibility', () => {

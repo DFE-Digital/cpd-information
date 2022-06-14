@@ -1,25 +1,25 @@
 
 {% extends "layout-version-2.html" %}
 
-{% block pageTitle %}
-Professional development for teachers and leaders
-{% endblock %}
-
 {% block beforeContent %}
-<a class="govuk-back-link" href="start">Back</a>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/version-2/course-list"
+    }
+  ]
+}) }}
 {% endblock %}
+
 {% block content %}
-
-
-
-
- 
-
 <h1 class="govuk-heading-xl">
   National professional qualifications (NPQs)
-   </h1> 
-    <p>Studying for an NPQ gives you the opportunity to focus on a specialist area of teaching or to develop your leadership skills. It could also help give you the edge in a competitive job market.</p> 
-      
+   </h1>
+    <p>Studying for an NPQ gives you the opportunity to focus on a specialist area of teaching or to develop your leadership skills. It could also help give you the edge in a competitive job market.</p>
+
     <p>NPQs are free for staff from state-funded schools and organisations that offer 16 to 19 places in England, so you do not have to worry about the cost either.</p>
 
  <div class="govuk-inset-text govuk-!-padding-top-2"><a href="what-is-an-npq">More information about NPQs</a> and how they could benefit you and your school.</div>
@@ -30,7 +30,7 @@ Professional development for teachers and leaders
       Specialist NPQs
     </h2>
     <p>
-      Take a specialist national professional qualification (NPQ) to enhance and develop your existing skills and knowledge both inside and outside of the classroom. 
+      Take a specialist national professional qualification (NPQ) to enhance and develop your existing skills and knowledge both inside and outside of the classroom.
     </p>
 
 </div>
@@ -65,7 +65,7 @@ Professional development for teachers and leaders
       <p class="govuk-!-margin-bottom-1">Learn how to become a teacher educator and successfully support teachers in your school to expand their skills.</p>
     </div>
   </div>
-  
+
 </div>
 
 <div class="govuk-grid-row govuk-!-padding-top-7">
@@ -109,7 +109,7 @@ Professional development for teachers and leaders
     <br>
     </div>
   </div>
-  
+
 </div>
 
 <div class="govuk-grid-row govuk-!-padding-top-2">
@@ -117,8 +117,8 @@ Professional development for teachers and leaders
     <h2 class="govuk-heading-l">
       Support for new headteachers
     </h2>
-    <p>Have you been a headteacher for less than 5 years?</p> 
-    
+    <p>Have you been a headteacher for less than 5 years?</p>
+
     <p>Our <a href="early-headship-coaching-offer">early headship coaching offer</a> features a range of support, including coaching and networking opportunities. You will also be able to access a toolkit of resources to help you thrive in your role.</p>
 
   </div>

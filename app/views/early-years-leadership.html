@@ -7,13 +7,16 @@ Early years leadership NPQ
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-breadcrumbs">
-  <ol class="govuk-breadcrumbs__list">
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/index">Home</a>
-    </li>
-  </ol>
-</div>
+{{ super() }}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -25,8 +28,8 @@ Early years leadership NPQ
       <h1 class="govuk-heading-xl">Early years leadership</h1>
 
       <h2 class="govuk-heading-l">Summary</h2>
- 
-      
+
+
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -50,7 +53,7 @@ Early years leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">1 to 2 hours</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -58,7 +61,7 @@ Early years leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Mix of self-study and group sessions</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -66,7 +69,7 @@ Early years leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Reflection based on case study (up to 2,500 words)</p>
-          </dd>  
+          </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -74,7 +77,7 @@ Early years leadership NPQ
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">Autumn 2022 (apply from June)</p>
-          </dd>  
+          </dd>
         </div>
 
       </dl>
@@ -90,7 +93,7 @@ Early years leadership NPQ
         <li>working with children who have additional and special educational needs</li>
         <li>implementing improvements</li>
       </ul>
-      
+
       <p>You'll get to train alongside peers with similar responsibilities. The course content focuses on the key challenges teachers face in their role.</p>
 
       <p>Early years professionals helped us design this course to fit around busy schedules so it does not add to your workload.</p>
@@ -141,7 +144,7 @@ Early years leadership NPQ
       <h3 class="govuk-heading-m">Knowing what approaches to use</h3>
 
       <p>This course will help you hone your decision-making skills. The techniques you learn can be applied to a range of different improvement decisions for your setting.</p>
-      
+
       <h3 class="govuk-heading-m">Learning with people from different education settings</h3>
 
       <p>Take advantage of training alongside a diverse group of fellow educators with lots of different perspectives. You can learn from each others experiences and bounce ideas off each other during group sessions and collaborative practical tasks.</p>
@@ -162,9 +165,9 @@ Early years leadership NPQ
         <li>complete the course</li>
         <li>pass a written assessment (up to 2,500 words) at the end</li>
       </ul>
-      
+
       <p>Your course provider will be able to give you more details about how the assessment works.</p>
-      
+
       <h2 class="govuk-heading-l">Course funding</h2>
 
       <p>Full DfE funding, with no cost to the participant, is available to leaders employed:</p>
