@@ -1,5 +1,1 @@
-/* global $ */
-
-$(document).ready(function () {
-  window.GOVUKFrontend.initAll()
-})
+window.GOVUKFrontend.initAll();

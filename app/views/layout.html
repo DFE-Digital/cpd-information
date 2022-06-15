@@ -34,7 +34,7 @@
 {% block pageTitle %}Professional development for teachers and leaders{% endblock %}
 
 {% block headIcons %}
-    {{ super() }}
+  {{ super() }}
 {% endblock %}
 
 {% block head %}
@@ -65,29 +65,47 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukSkipLink({
-    href: "#main-content",
-    text: "Skip to main content"
-  }) }}
+  <nav>
+    {{ govukSkipLink({
+      href: "#main-content",
+      text: "Skip to main content"
+    }) }}
+  </nav>
 
-  {{ govukPhaseBanner({
-    tag: {
-      text: "Beta"
-    },
-    html: 'We would love your feedback - use this <a href="https://www.smartsurvey.co.uk/s/OCZTVF/">SmartSurvey form</a> to tell us how we can improve our content.'
-  }) }}
+  <aside>
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Beta"
+      },
+      html: 'We would love your feedback - use this <a href="https://www.smartsurvey.co.uk/s/OCZTVF/">SmartSurvey form</a> to tell us how we can improve our content.'
+    }) }}
+  </aside>
+
+  {% block breadcrumbs %}
+    <nav aria-label="breadcrumbs">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "Home",
+            href: "/"
+          }
+        ]
+      }) }}
+    </nav>
+  {% endblock %}
 {% endblock %}
 
 
 
 {% block footer %}
+<<<<<<< HEAD
   <div class="govuk-width-container">
-        
+
     <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt govuk-!-padding-2" tabindex="-1">
       <div class="gem-c-feedback__prompt-questions js-prompt-questions">
         <h2 class="govuk-label govuk-label--m white-text">We'd love your feedback </h2>
         <div class="govuk-body govuk-!-padding-bottom-2 govuk-!-margin-bottom-0 white-text"> Use this <a class="white-text" href="https://www.smartsurvey.co.uk/s/AMX4VA/">SmartSurvey form</a> to tell us how we can make our NPQs content better.</div>
-    
+
       </div>
     </div>
     </div>
@@ -109,6 +127,26 @@
     ]
   }
 }) }}
+=======
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "/cookies",
+          text: "Cookies"
+        },
+        {
+          href: "/privacy",
+          text: "Privacy"
+        },
+        {
+          href: "/accessibility-statement",
+          text: "Accessibility"
+        }
+      ]
+    }
+  }) }}
+>>>>>>> d43ddab... wraps root elements in appropriate containers and removes duplicted id in cookies JS
 {% endblock %}
 
 {% block bodyEnd %}

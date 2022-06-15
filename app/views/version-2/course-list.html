@@ -1,19 +1,6 @@
 
 {% extends "layout-version-2.html" %}
 
-{% block beforeContent %}
-{{ super() }}
-
-{{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Home",
-      href: "/version-2/course-list"
-    }
-  ]
-}) }}
-{% endblock %}
-
 {% block content %}
 <h1 class="govuk-heading-xl">
   National professional qualifications (NPQs)
