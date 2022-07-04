@@ -1,10 +1,7 @@
-name: Deploy to Dev
+name: Deploy to Production
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   deploy:
@@ -36,12 +33,12 @@ jobs:
           CF_DOCKER_PASSWORD: ${{ secrets.DOCKER_DEV_PASSWORD }}
           PAAS_ORGANISATION: dfe
           # This is a shared PAAS space
-          PAAS_SPACE: earlycareers-framework-dev
-          ENV_STUB: dev
+          PAAS_SPACE: early-careers-framework-prod
+          ENV_STUB: production
           APP_NAME: cpd-information
-          REMOTE_DOCKER_IMAGE_NAME: dfedigital/early-careers-framework-dev
-          CF_USERNAME: ${{ secrets.GOVPAAS_DEV_USERNAME }}
-          CF_PASSWORD: ${{ secrets.GOVPAAS_DEV_PASSWORD }}
+          REMOTE_DOCKER_IMAGE_NAME: dfedigital/early-careers-framework-production
+          CF_USERNAME: ${{ secrets.GOVPAAS_PROD_USERNAME }}
+          CF_PASSWORD: ${{ secrets.GOVPAAS_PROD_PASSWORD }}
         run: |
           cf api https://api.london.cloud.service.gov.uk
           cf auth

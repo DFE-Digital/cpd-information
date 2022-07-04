@@ -31,50 +31,103 @@
 {% from "govuk/components/textarea/macro.njk"            import govukTextarea %}
 {% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
 
-{% block head %}
-  {% include "includes/head.html" %}
+{% block pageTitle %}Professional development for teachers and leaders{% endblock %}
+
+{% block headIcons %}
+  {{ super() }}
 {% endblock %}
 
-{% block pageTitle %}
-  GOV.UK Prototype Kit
+{% block head %}
+{% block meta %}{% endblock %}
+{% include "includes/head.html" %}
 {% endblock %}
+
+{% block bodyStart %}
+  {{ super() }}
+{% endblock %}
+
+{% block skipLink %}{% endblock %}
 
 {% block header %}
   {# Set serviceName in config.js. #}
   {{ govukHeader({
     homepageUrl: "/",
+    containerClasses: "govuk-width-container",
     serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
+    serviceUrl: "/"
   }) }}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
-{% if useAutoStoreData %}
-  {% block footer %}
-    {{ govukFooter({
-      meta: {
+{% block main %}
+  {{ super() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <nav>
+    {{ govukSkipLink({
+      href: "#main-content",
+      text: "Skip to main content"
+    }) }}
+  </nav>
+
+  <aside>
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Beta"
+      },
+      html: 'We would love your feedback - use this <a href="https://www.smartsurvey.co.uk/s/OCZTVF/">SmartSurvey form</a> to tell us how we can improve our content.'
+    }) }}
+  </aside>
+
+  {% block breadcrumbs %}
+    <nav aria-label="breadcrumbs">
+      {{ govukBreadcrumbs({
         items: [
           {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
-          },
-          {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
+            text: "Home",
+            href: "/"
           }
-        ],
-        visuallyHiddenTitle: "Footer links"
-      }
-    }) }}
+        ]
+      }) }}
+    </nav>
   {% endblock %}
-{% endif %}
+{% endblock %}
+
+
+
+{% block footer %}
+  <div class="govuk-width-container">
+    <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt govuk-!-padding-2" tabindex="-1">
+      <div class="gem-c-feedback__prompt-questions js-prompt-questions">
+        <h2 class="govuk-label govuk-label--m white-text">We'd love your feedback </h2>
+        <div class="govuk-body govuk-!-padding-bottom-2 govuk-!-margin-bottom-0 white-text"> Use this <a class="white-text" href="https://www.smartsurvey.co.uk/s/AMX4VA/">SmartSurvey form</a> to tell us how we can make our NPQs content better.</div>
+      </div>
+    </div>
+  </div>
+
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+          href: "/cookies",
+          text: "Cookies"
+        },
+        {
+          href: "/privacy",
+          text: "Privacy"
+        },
+        {
+          href: "/accessibility-statement",
+          text: "Accessibility"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}
 
 {% block bodyEnd %}
-  {% block scripts %}
-    {% include "includes/scripts.html" %}
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
-  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+  {% include "includes/scripts.html" %}
+  {% block pageScripts %}{% endblock %}
 {% endblock %}
