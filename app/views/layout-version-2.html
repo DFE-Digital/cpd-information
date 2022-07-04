@@ -1,73 +1,53 @@
-{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
-{%- set assetPath = '/govuk/assets' -%}
+{% extends "layout.html" %}
 
-{% extends "govuk/template.njk" %}
+{% block beforeContent %}
+  <nav>
+    {{ govukSkipLink({
+      href: "#main-content",
+      text: "Skip to main content"
+    }) }}
+  </nav>
 
-{% from "govuk/components/accordion/macro.njk"           import govukAccordion %}
-{% from "govuk/components/back-link/macro.njk"           import govukBackLink %}
-{% from "govuk/components/breadcrumbs/macro.njk"         import govukBreadcrumbs %}
-{% from "govuk/components/button/macro.njk"              import govukButton %}
-{% from "govuk/components/character-count/macro.njk"     import govukCharacterCount %}
-{% from "govuk/components/checkboxes/macro.njk"          import govukCheckboxes %}
-{% from "govuk/components/cookie-banner/macro.njk"       import govukCookieBanner %}
-{% from "govuk/components/date-input/macro.njk"          import govukDateInput %}
-{% from "govuk/components/details/macro.njk"             import govukDetails %}
-{% from "govuk/components/error-message/macro.njk"       import govukErrorMessage %}
-{% from "govuk/components/error-summary/macro.njk"       import govukErrorSummary %}
-{% from "govuk/components/fieldset/macro.njk"            import govukFieldset %}
-{% from "govuk/components/file-upload/macro.njk"         import govukFileUpload %}
-{% from "govuk/components/input/macro.njk"               import govukInput %}
-{% from "govuk/components/inset-text/macro.njk"          import govukInsetText %}
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
-{% from "govuk/components/panel/macro.njk"               import govukPanel %}
-{% from "govuk/components/phase-banner/macro.njk"        import govukPhaseBanner %}
-{% from "govuk/components/radios/macro.njk"              import govukRadios %}
-{% from "govuk/components/select/macro.njk"              import govukSelect %}
-{% from "govuk/components/skip-link/macro.njk"           import govukSkipLink %}
-{% from "govuk/components/summary-list/macro.njk"        import govukSummaryList %}
-{% from "govuk/components/table/macro.njk"               import govukTable %}
-{% from "govuk/components/tabs/macro.njk"                import govukTabs %}
-{% from "govuk/components/tag/macro.njk"                 import govukTag %}
-{% from "govuk/components/textarea/macro.njk"            import govukTextarea %}
-{% from "govuk/components/warning-text/macro.njk"        import govukWarningText %}
+  <aside>
+    {{ govukPhaseBanner({
+      tag: {
+        text: "Beta"
+      },
+      html: 'This is a new service'
+    }) }}
+  </aside>
 
-{% block head %}
-  {% include "includes/head.html" %}
-{% endblock %}
-
-{% block pageTitle %}
-  GOV.UK Prototype Kit
-{% endblock %}
-
-{% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
-
-
-  <div class="govuk-width-container {{mainClasses}}">
-
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-      {{ govukPhaseBanner({
-        tag: {
-          text: "Prototype: Version 2"
-        },
-        html: 'Tell us about this service - your <a href="survey">feedback</a> will help us to improve it.'
+  {% block breadcrumbs %}
+    <nav aria-label="breadcrumbs">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "Home",
+            href: "/version-2/course-list"
+          }
+        ]
       }) }}
-    </div>
+    </nav>
+  {% endblock %}
 {% endblock %}
-
-{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% if useAutoStoreData %}
   {% block footer %}
     {{ govukFooter({
       meta: {
         items: [
+          {
+            href: "/cookies",
+            text: "Cookies"
+          },
+          {
+            href: "/privacy",
+            text: "Privacy"
+          },
+          {
+            href: "/accessibility-statement",
+            text: "Accessibility"
+          },
           {
             href: "https://govuk-prototype-kit.herokuapp.com/",
             text: "GOV.UK Prototype Kit " + releaseVersion
@@ -84,9 +64,6 @@
 {% endif %}
 
 {% block bodyEnd %}
-  {% block scripts %}
-    {% include "includes/scripts.html" %}
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
-  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+  {% include "includes/scripts-2.html" %}
+  {% block pageScripts %}{% endblock %}
 {% endblock %}

@@ -16,3 +16,5 @@ public
 node_modules/
 .tmuxp.*
 .idea
+cypress/screenshots
+cypress/videos
