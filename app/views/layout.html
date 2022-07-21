@@ -95,18 +95,18 @@
   {% endblock %}
 {% endblock %}
 
+{% block content %}
+  {{ super() }}
 
-
-{% block footer %}
-  <div class="govuk-width-container">
-    <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt govuk-!-padding-2" tabindex="-1">
-      <div class="gem-c-feedback__prompt-questions js-prompt-questions">
-        <h2 class="govuk-label govuk-label--m white-text">We'd love your feedback </h2>
-        <div class="govuk-body govuk-!-padding-bottom-2 govuk-!-margin-bottom-0 white-text"> Use this <a class="white-text" href="https://www.smartsurvey.co.uk/s/AMX4VA/">SmartSurvey form</a> to tell us how we can make our NPQs content better.</div>
-      </div>
+  <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt govuk-!-padding-2" style="margin-bottom:-40px" tabindex="-1">
+    <div class="gem-c-feedback__prompt-questions js-prompt-questions">
+      <h2 class="govuk-label govuk-label--m white-text">We'd love your feedback </h2>
+      <div class="govuk-body govuk-!-padding-bottom-2 govuk-!-margin-bottom-0 white-text"> Use this <a class="white-text" href="https://www.smartsurvey.co.uk/s/AMX4VA/">SmartSurvey form</a> to tell us how we can make our NPQs content better.</div>
     </div>
   </div>
+{% endblock %}
 
+{% block footer %}
   {{ govukFooter({
     meta: {
       items: [
