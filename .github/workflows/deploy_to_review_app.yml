@@ -33,13 +33,11 @@ jobs:
         id: deploy-to-paas
         shell: bash
         env:
-          CF_DOCKER_PASSWORD: ${{ secrets.DOCKER_DEV_PASSWORD }}
           PAAS_ORGANISATION: dfe
           # This is a shared PAAS space
           PAAS_SPACE: earlycareers-framework-dev
           ENV_STUB: review-app-${{ github.event.number }}
           APP_NAME: cpd-information
-          REMOTE_DOCKER_IMAGE_NAME: dfedigital/early-careers-framework-review-app-${{ github.event.number }}
           CF_USERNAME: ${{ secrets.GOVPAAS_DEV_USERNAME }}
           CF_PASSWORD: ${{ secrets.GOVPAAS_DEV_PASSWORD }}
         run: |
