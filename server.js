@@ -221,6 +221,11 @@ app.get(/^([^.]+)$/, function (req, res, next) {
   utils.matchRoutes(req, res, next)
 })
 
+app.get("/test-redirect", function (req, res, next) {
+  res.redirect("https://gov.uk", 301)
+})
+
+
 if (useDocumentation) {
   // Documentation  routes
   documentationApp.get(/^([^.]+)$/, function (req, res, next) {
