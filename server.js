@@ -184,6 +184,24 @@ if (useV6) {
   app.use('/public/v6/javascripts/govuk/', express.static(path.join(__dirname, '/node_modules/govuk_frontend_toolkit/javascripts/govuk/')))
 }
 
+const redirects = [
+    ["/" , "https://www.gov.uk/guidance/national-professional-qualification-npq-courses"],
+    ["/leading-primary-mathematics", "https://www.gov.uk/guidance/leading-primary-mathematics-national-professional-qualification"],
+    ["/leading-teaching", "https://www.gov.uk/guidance/leading-teaching-national-professional-qualification"],
+    ["/leading-behaviour-and-culture", "https://www.gov.uk/guidance/leading-behaviour-and-culture-national-professional-qualification"],
+    ["/leading-literacy", "https://www.gov.uk/guidance/leading-literacy-national-professional-qualification"],
+    ["/leading-teacher-development", "https://www.gov.uk/guidance/leading-teacher-development-national-professional-qualification"],
+    ["/senior-leadership", "https://www.gov.uk/guidance/senior-leadership-national-professional-qualification"],
+    ["/headship", "https://www.gov.uk/guidance/headship-national-professional-qualification"],
+    ["/executive-leadership", "https://www.gov.uk/guidance/executive-leadership-national-professional-qualification"],
+    ["/early-years-leadership", "https://www.gov.uk/guidance/early-years-leadership-national-professional-qualification"],
+    ["/early-headship-coaching-offer", "https://www.gov.uk/guidance/early-headship-coaching-offer"],
+].forEach(function(fromTo) {
+    app.get(fromTo[0], function (req, res, next) {
+      res.redirect(fromTo[1], 301)
+    })
+})
+
 // Load routes (found in app/routes.js)
 if (typeof (routes) !== 'function') {
   console.log(routes.bind)
