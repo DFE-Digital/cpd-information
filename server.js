@@ -202,6 +202,11 @@ const redirects = [
     })
 })
 
+// As we are retiring this app, we want to redirect everything to main page of the GOV.UK guides.
+app.use(function (req, res, next) {
+  res.redirect("https://www.gov.uk/guidance/national-professional-qualification-npq-courses", 301)
+})
+
 // Load routes (found in app/routes.js)
 if (typeof (routes) !== 'function') {
   console.log(routes.bind)
