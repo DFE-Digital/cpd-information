@@ -7,4 +7,5 @@ module "domains" {
   resource_group_name = each.value.resource_group_name
   domains             = each.value.domains
   environment         = each.value.environment_short
+  redirect_rules      = each.value.redirect_rules
 }
