@@ -1,8 +1,0 @@
-# exclude the files with inline SVGs
-exclude:
-  - layouts/partials/crown.slim
-  - layouts/partials/footer.slim
-
-linters:
-  LineLength:
-    max: 80
