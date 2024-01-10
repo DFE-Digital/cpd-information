@@ -1,6 +1,0 @@
----
-applications:
-- name: ((APP_NAME))-((ENV_STUB))
-  memory: 64M
-  buildpacks:
-    - nodejs_buildpack

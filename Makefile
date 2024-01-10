@@ -8,7 +8,7 @@ SERVICE_SHORT=cpdinf
 help:
 	@grep -E '^[a-zA-Z\._\-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-production: production-cluster
+production:
 	$(if $(or ${SKIP_CONFIRM}, ${CONFIRM_PRODUCTION}), , $(error Missing CONFIRM_PRODUCTION=yes))
 	$(eval include global_config/production.sh)
 
@@ -21,38 +21,12 @@ composed-variables:
 	$(eval STORAGE_ACCOUNT_NAME=${AZURE_RESOURCE_PREFIX}${SERVICE_SHORT}${CONFIG_SHORT}tfsa)
 	$(eval LOG_ANALYTICS_WORKSPACE_NAME=${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-log)
 
-ci:
-	$(eval AUTO_APPROVE=-auto-approve)
-	$(eval SKIP_AZURE_LOGIN=true)
-	$(eval SKIP_CONFIRM=true)
-
 bin/terrafile: ## Install terrafile to manage terraform modules
 	curl -sL https://github.com/coretech/terrafile/releases/download/v${TERRAFILE_VERSION}/terrafile_${TERRAFILE_VERSION}_$$(uname)_x86_64.tar.gz \
 		| tar xz -C ./bin terrafile
 
 set-azure-account:
 	[ "${SKIP_AZURE_LOGIN}" != "true" ] && az account set -s ${AZURE_SUBSCRIPTION} || true
-
-terraform-init: composed-variables bin/terrafile set-azure-account
-	$(if ${DOCKER_IMAGE_TAG}, , $(eval DOCKER_IMAGE_TAG=main))
-
-	./bin/terrafile -p terraform/application/vendor/modules -f terraform/application/config/$(CONFIG)_Terrafile
-	terraform -chdir=terraform/application init -upgrade -reconfigure \
-		-backend-config=resource_group_name=${RESOURCE_GROUP_NAME} \
-		-backend-config=storage_account_name=${STORAGE_ACCOUNT_NAME} \
-		-backend-config=key=${ENVIRONMENT}_kubernetes.tfstate
-
-	$(eval export TF_VAR_azure_resource_prefix=${AZURE_RESOURCE_PREFIX})
-	$(eval export TF_VAR_config_short=${CONFIG_SHORT})
-	$(eval export TF_VAR_service_name=${SERVICE_NAME})
-	$(eval export TF_VAR_service_short=${SERVICE_SHORT})
-	$(eval export TF_VAR_docker_image=${DOCKER_REPOSITORY}:${DOCKER_IMAGE_TAG})
-
-terraform-plan: terraform-init
-	terraform -chdir=terraform/application plan -var-file "config/${CONFIG}.tfvars.json"
-
-terraform-apply: terraform-init
-	terraform -chdir=terraform/application apply -var-file "config/${CONFIG}.tfvars.json" ${AUTO_APPROVE}
 
 set-what-if:
 	$(eval WHAT_IF=--what-if)
@@ -101,14 +75,3 @@ domains-plan: domains-init ## Terraform plan for DNS environment domains. Usage:
 
 domains-apply: domains-init ## Terraform apply for DNS environment domains. Usage: make production domains domains-apply
 	terraform -chdir=terraform/domains/environment_domains apply -var-file config/${CONFIG}.tfvars.json ${AUTO_APPROVE}
-
-test-cluster:
-	$(eval CLUSTER_RESOURCE_GROUP_NAME=s189t01-tsc-ts-rg)
-	$(eval CLUSTER_NAME=s189t01-tsc-test-aks)
-
-production-cluster:
-	$(eval CLUSTER_RESOURCE_GROUP_NAME=s189p01-tsc-pd-rg)
-	$(eval CLUSTER_NAME=s189p01-tsc-production-aks)
-
-get-cluster-credentials: set-azure-account
-	az aks get-credentials --overwrite-existing -g ${CLUSTER_RESOURCE_GROUP_NAME} -n ${CLUSTER_NAME}

@@ -1,6 +1,0 @@
----
-applications:
-- name: cpd-information-dev
-  memory: 64M
-  buildpacks:
-    - nodejs_buildpack
