@@ -9,3 +9,12 @@ module "domains" {
   environment         = each.value.environment_short
   redirect_rules      = each.value.redirect_rules
 }
+
+module "statuscake" {
+  source = "./vendor/modules/domains//monitoring/statuscake"
+
+  uptime_urls    = ["https://professional-development-for-teachers-leaders.education.gov.uk/"]
+  ssl_urls       = ["https://professional-development-for-teachers-leaders.education.gov.uk/"]
+  contact_groups = [291418, 282453] # CPD and Infra
+  confirmation   = 2
+}
