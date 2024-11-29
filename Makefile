@@ -1,4 +1,3 @@
-TERRAFILE_VERSION=0.8
 ARM_TEMPLATE_TAG=1.1.10
 RG_TAGS={"Product" : "Register for National Professional Qualifications (NPQ)"}
 REGION=UK South
@@ -20,10 +19,6 @@ composed-variables:
 	$(eval KEYVAULT_NAMES='["${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-kv"]')
 	$(eval STORAGE_ACCOUNT_NAME=${AZURE_RESOURCE_PREFIX}${SERVICE_SHORT}${CONFIG_SHORT}tfsa)
 	$(eval LOG_ANALYTICS_WORKSPACE_NAME=${AZURE_RESOURCE_PREFIX}-${SERVICE_SHORT}-${CONFIG_SHORT}-log)
-
-bin/terrafile: ## Install terrafile to manage terraform modules
-	curl -sL https://github.com/coretech/terrafile/releases/download/v${TERRAFILE_VERSION}/terrafile_${TERRAFILE_VERSION}_$$(uname)_x86_64.tar.gz \
-		| tar xz -C ./bin terrafile
 
 set-azure-account:
 	[ "${SKIP_AZURE_LOGIN}" != "true" ] && az account set -s ${AZURE_SUBSCRIPTION} || true
@@ -48,8 +43,9 @@ deploy-arm-resources: arm-deployment
 
 validate-arm-resources: set-what-if arm-deployment
 
-domains-infra-init: bin/terrafile domains composed-variables set-azure-account
-	./bin/terrafile -p terraform/domains/infrastructure/vendor/modules -f terraform/domains/infrastructure/config/zones_Terrafile
+domains-infra-init: domains composed-variables set-azure-account
+	rm -rf terraform/domains/infrastructure/vendor/modules/domains
+	git -c advice.detachedHead=false clone --depth=1 --single-branch --branch ${TERRAFORM_MODULES_TAG} https://github.com/DFE-Digital/terraform-modules.git terraform/domains/infrastructure/vendor/modules/domains
 
 	terraform -chdir=terraform/domains/infrastructure init -reconfigure -upgrade \
 		-backend-config=resource_group_name=${RESOURCE_GROUP_NAME} \
@@ -62,8 +58,9 @@ domains-infra-plan: domains domains-infra-init ## Terraform plan for DNS infrast
 domains-infra-apply: domains domains-infra-init ## Terraform apply for DNS infrastructure (zone and front door). Usage: make domains-infra-apply
 	terraform -chdir=terraform/domains/infrastructure apply -var-file config/zones.tfvars.json ${AUTO_APPROVE}
 
-domains-init: bin/terrafile domains composed-variables set-azure-account
-	./bin/terrafile -p terraform/domains/environment_domains/vendor/modules -f terraform/domains/environment_domains/config/${CONFIG}_Terrafile
+domains-init: domains composed-variables set-azure-account
+	rm -rf terraform/domains/environment_domains/vendor/modules/domains
+	git -c advice.detachedHead=false clone --depth=1 --single-branch --branch ${TERRAFORM_MODULES_TAG} https://github.com/DFE-Digital/terraform-modules.git terraform/domains/environment_domains/vendor/modules/domains
 
 	terraform -chdir=terraform/domains/environment_domains init -upgrade -reconfigure \
 		-backend-config=resource_group_name=${RESOURCE_GROUP_NAME} \
