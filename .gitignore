@@ -4,5 +4,4 @@
 # Terraform files
 .terraform
 terraform.tfstate*
-bin/terrafile
 terraform/**/vendor/
